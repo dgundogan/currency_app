@@ -56,6 +56,3 @@ The GET API can be used to retrieve the currency rates for a given date.
 
 
 
-curl https://gist.githubusercontent.com/richardARPANET/79434d9995585f639344e17c35476728/raw/36e9ca68088ee7832220a20c31997a25a0bbd271/lint.sh | sh
-
-
