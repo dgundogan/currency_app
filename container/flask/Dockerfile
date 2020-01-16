@@ -10,4 +10,5 @@ RUN pip install flask gunicorn
 
 ENV WEBAPP_ENV=prod
 
+RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/app/entrypoint.sh"]
