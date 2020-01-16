@@ -3,15 +3,6 @@
 [Install docker](https://docs.docker.com/install/)   
 [Install docker-compose](https://docs.docker.com/compose/install/)
 
-## Database Configuration
-
-python manage.py db init
-
-python manage.py db migrate
-
-python manage.py db upgrade
-
-
 ## Run
 
 ### Run server
@@ -26,7 +17,7 @@ python manage.py db upgrade
 then run the following in container shell:
 
 	pytest -v
-
+    python manage.py test
 
 ## REST API 
 

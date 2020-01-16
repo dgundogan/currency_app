@@ -2,7 +2,7 @@ import unittest
 import json
 
 from run import create_app
-from Model import db
+from app.Model import db
 
 
 class CurrencyTestCase(unittest.TestCase):
