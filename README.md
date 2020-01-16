@@ -16,7 +16,6 @@
 
 then run the following in container shell:
 
-	pytest -v
     python manage.py test
 
 ## REST API 
