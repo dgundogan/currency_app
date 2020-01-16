@@ -20,8 +20,9 @@ services:
     volumes: 
       - .:/srv/flask_app
     env_file: .env
-    command: python manage.py db init
-    command: python manage.py db migrate
+    ports:
+      - 5000:5000
+    command: gunicorn --bind 0.0.0.0:5000 run:app
     depends_on:
      - db
      - testdb

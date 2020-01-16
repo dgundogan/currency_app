@@ -20,4 +20,4 @@ def create_app(config_name):
 if __name__ == "__main__":
     env = os.environ.get('WEBAPP_ENV', 'dev')
     app = create_app(env)
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host='0.0.0.0')
