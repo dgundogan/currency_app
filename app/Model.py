@@ -1,10 +1,10 @@
-from flask import Flask
-from marshmallow import Schema, fields, pre_load, validate
+from marshmallow import fields
 from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 
 ma = Marshmallow()
 db = SQLAlchemy()
+
 
 class Currency(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -12,6 +12,7 @@ class Currency(db.Model):
     base = db.Column(db.String(10))
     currency = db.Column(db.String(10))
     rate = db.Column(db.Integer())
+
 
 class CurrencySchema(ma.Schema):
     base = fields.String(required=True)

@@ -7,6 +7,7 @@ RUN pip install --upgrade pip
 RUN pip3 install -r requirements.txt 
 
 RUN pip install flask gunicorn
+RUN pip install flake8
 
 ENV WEBAPP_ENV=prod
 
