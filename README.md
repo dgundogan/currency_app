@@ -10,14 +10,6 @@
     sudo docker-compose up -d
 
 
-## Run tests
-
-	sudo docker-compose run web bash
-
-then run the following in container shell:
-
-    python manage.py test
-
 ##  DB creation
 
     Please run it after starting the server
@@ -25,6 +17,14 @@ then run the following in container shell:
     docker-compose exec web python manage.py db init
     docker-compose exec web python manage.py db migrate
     docker-compose exec web python manage.py db upgrade
+    
+## Run tests
+
+	sudo docker-compose run web bash
+
+then run the following in container shell:
+
+    	python manage.py test
 
 ## REST API 
 
