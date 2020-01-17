@@ -24,12 +24,13 @@
 
 then run the following in container shell:
 
-    	python manage.py test
+ 	python manage.py test
 
 ## REST API 
 
 ### POST 
 When executed it will ingest the data from 3rd party API. You can use it as a CLI like below.
+    
     curl -X POST http://0.0.0.0:5000/api/currencies
 
 ### GET
