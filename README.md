@@ -35,6 +35,7 @@ When executed it will ingest the data from 3rd party API. You can use it as a CL
 
 ### GET
 The GET API can be used to retrieve the currency rates for a given date.
+
     http://0.0.0.0:5000/api/currencies?date=2020-01-15
 
 ## Monitoring
