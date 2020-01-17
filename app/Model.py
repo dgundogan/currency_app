@@ -11,7 +11,7 @@ class Currency(db.Model):
     date = db.Column(db.Date)
     base = db.Column(db.String(10))
     currency = db.Column(db.String(10))
-    rate = db.Column(db.Integer())
+    rate = db.Column(db.Float())
 
 
 class CurrencySchema(ma.Schema):

@@ -1,12 +1,13 @@
-from flask import Flask
 import flask_monitoringdashboard as dashboard
 import os
 
+from flask import Flask
 from app.config import app_config
+
+app = Flask(__name__)
 
 
 def create_app(config_name):
-    app = Flask(__name__)
     dashboard.bind(app)
     app.config.from_object(app_config[config_name])
 
@@ -22,4 +23,4 @@ def create_app(config_name):
 if __name__ == "__main__":
     env = os.environ.get('WEBAPP_ENV', 'dev')
     app = create_app(env)
-    app.run(host='0.0.0.0')
+    app.run(host="0.0.0.0", debug=True)

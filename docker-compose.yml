@@ -1,7 +1,6 @@
 version: '3.7'
 services:
   db:
-    container_name: db
     image: postgres:latest
     env_file: container/database.conf
     ports:
@@ -9,27 +8,19 @@ services:
     volumes:
       - ./postgres-data/postgres:/var/lib/postgresql/data
   testdb:
-    container_name: testdb
     image: postgres:latest
     env_file: container/database_test.conf
   web:
-    container_name: flask_app
     build:
       context: .
       dockerfile: container/flask/Dockerfile
+    command: gunicorn --bind 0.0.0.0:5000 manage:app
     volumes: 
       - .:/srv/flask_app
     env_file: .env
-    command: gunicorn --bind 0.0.0.0:5000 run:app
-    expose:
-      - 5000
+    ports:
+      - 5000:5000
     depends_on:
      - db
      - testdb
     restart: unless-stopped
-  nginx:
-    build: ./nginx
-    ports:
-      - 1337:80
-    depends_on:
-      - web

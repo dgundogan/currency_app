@@ -13,4 +13,4 @@ flask_script==2.0.6
 flask_migrate==2.1.1
 environs==7.1.0
 pytest==5.3.2
-flask_monitoringdashboard==3.0.5
+flask_monitoringdashboard==3.0.6

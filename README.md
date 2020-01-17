@@ -18,6 +18,14 @@ then run the following in container shell:
 
     python manage.py test
 
+##  DB creation
+
+    Please run it after starting the server
+
+    docker-compose exec web python manage.py db init
+    docker-compose exec web python manage.py db migrate
+    docker-compose exec web python manage.py db upgrade
+
 ## REST API 
 
 ### POST 
